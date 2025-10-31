@@ -125,7 +125,7 @@ See the `pybigtools` 🐍 [API Documentation](https://bigtools.readthedocs.io/en
 
 In order to build the bigtools binaries, you can run
 
-```
+```sh
 cargo build --release
 ```
 
@@ -133,20 +133,20 @@ and the binaries can be found in `target/release/`.
 
 Otherwise, you can install the binaries from source by running
 
-```
+```sh
 cargo install --path bigtools/
 ```
 
 Building the python wheels for pybigtools requires [maturin](https://pypi.org/project/maturin/). To build the pybigtools wheel for installation (and install), you can run
 
-```
+```sh
 maturin build --release -m pybigtools/Cargo.toml
 pip install target/wheels/pybigtools*.whl
 ```
 
 or
 
-```
+```sh
 maturin develop --release -m pybigtools/Cargo.toml
 ```
 
@@ -155,7 +155,7 @@ maturin develop --release -m pybigtools/Cargo.toml
 
 Benchmarks are included in the `./bench` directory. They require `python` to run.
 
-Multiple tools are compared against the comparable UCSC tools. For completeness, both single-threaded and multi-threaded (when available) benchmarks are included. Multiple different configuration options are benchmarked across multiple replicates, but a summar is available in the table below:
+Multiple tools are compared against the comparable UCSC tools. For completeness, both single-threaded and multi-threaded (when available) benchmarks are included. Multiple different configuration options are benchmarked across multiple replicates, but a summary is available in the table below:
 
 <img src="https://github.com/jackh726/bigtools/raw/master/assets/bigtools-bench.png"></img></a>
 
